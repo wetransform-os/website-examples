@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gmd:MD_Metadata xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd">
+  <gmd:hierarchyLevel>
+    <gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_ScopeCode" codeListValue="attributeType"/>
+  </gmd:hierarchyLevel>
+  <gmd:contact>
+    <gmd:CI_ResponsibleParty id="ID-4542" uuid="complexValue-uuid">
+      <gmd:role>
+        <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode" codeListValue="custodian"/>
+      </gmd:role>
+    </gmd:CI_ResponsibleParty>
+  </gmd:contact>
+  <gmd:dateStamp>
+    <gco:DateTime>2018-05-30T09:00:00</gco:DateTime>
+  </gmd:dateStamp>
+  <gmd:metadataStandardName>
+    <gco:CharacterString>example string</gco:CharacterString>
+  </gmd:metadataStandardName>
+  <gmd:identificationInfo>
+    <gmd:MD_DataIdentification>
+      <gmd:citation>
+        <gmd:CI_Citation id="ID-3007" uuid="true">
+          <gmd:title>
+            <gco:CharacterString>example string</gco:CharacterString>
+          </gmd:title>
+          <gmd:alternateTitle>
+            <gco:CharacterString>example string</gco:CharacterString>
+          </gmd:alternateTitle>
+          <gmd:date>
+            <gmd:CI_Date>
+              <gmd:date>
+                <gco:DateTime>2018-05-30T09:00:00</gco:DateTime>
+              </gmd:date>
+              <gmd:dateType>
+                <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
+              </gmd:dateType>
+            </gmd:CI_Date>
+          </gmd:date>
+          <gmd:edition>
+            <gco:CharacterString>example string</gco:CharacterString>
+          </gmd:edition>
+          <gmd:editionDate>
+            <gco:DateTime>2018-05-30T09:00:00</gco:DateTime>
+          </gmd:editionDate>
+          <gmd:identifier>
+            <gmd:MD_Identifier>
+              <gmd:code>
+                <gco:CharacterString>example string</gco:CharacterString>
+              </gmd:code>
+            </gmd:MD_Identifier>
+          </gmd:identifier>
+          <gmd:citedResponsibleParty>
+            <gmd:CI_ResponsibleParty id="ID-466" uuid="complexValue-uuid">
+              <gmd:role>
+                <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode" codeListValue="custodian"/>
+              </gmd:role>
+            </gmd:CI_ResponsibleParty>
+          </gmd:citedResponsibleParty>
+          <gmd:presentationForm>
+            <gmd:CI_PresentationFormCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_PresentationFormCode" codeListValue="mapHardcopy"/>
+          </gmd:presentationForm>
+          <gmd:series>
+            <gmd:CI_Series/>
+          </gmd:series>
+          <gmd:otherCitationDetails>
+            <gco:CharacterString>example string</gco:CharacterString>
+          </gmd:otherCitationDetails>
+          <gmd:collectiveTitle>
+            <gco:CharacterString>example string</gco:CharacterString>
+          </gmd:collectiveTitle>
+          <gmd:ISBN>
+            <gco:CharacterString>example string</gco:CharacterString>
+          </gmd:ISBN>
+          <gmd:ISSN>
+            <gco:CharacterString>example string</gco:CharacterString>
+          </gmd:ISSN>
+        </gmd:CI_Citation>
+      </gmd:citation>
+      <gmd:abstract>
+        <gco:CharacterString>example string</gco:CharacterString>
+      </gmd:abstract>
+      <gmd:language>
+        <gco:CharacterString>example string</gco:CharacterString>
+      </gmd:language>
+    </gmd:MD_DataIdentification>
+  </gmd:identificationInfo>
+</gmd:MD_Metadata>

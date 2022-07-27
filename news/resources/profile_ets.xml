@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID0a071d31-b17a-4200-817d-ca029564b3ba" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+  <itemHash>bQ==</itemHash>
+  <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
+  <localPath>/auto</localPath>
+  <label>Metadatenprofil GDI-BW 1.3 (Beispiel-MD-Daten)</label>
+  <description><![CDATA[Metadatenprofil GDI-BW 1.3 (Beispiel-MD-Daten) - Betatest]]></description>
+  <reference>../../inspire-md-bsxets.xq</reference>
+  <version>1.0.0</version>
+  <author>Dejan Deordic</author>
+  <creationDate>2018-10-16T10:33:36.158Z</creationDate>
+  <lastEditor>Dejan Deordic</lastEditor>
+  <lastUpdateDate>2018-10-16T10:33:36.158Z</lastUpdateDate>
+  <tags>
+    <tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
+  </tags>
+  <testDriver ref="EID4dddc9e2-1b21-40b7-af70-6a2d156ad130"/>
+  <translationTemplateBundle ref="EID70a263c0-0ad7-42f2-9d4d-0d8a4ca71b52"/>
+  <ParameterList name="ETF Standard Parameters for XML test objects">
+    <parameter name="files_to_test" required="true">
+      <defaultValue>.*</defaultValue>
+      <allowedValues>.*</allowedValues>
+      <type>string</type>
+    </parameter>
+    <parameter name="tests_to_execute" required="false">
+      <defaultValue>.*</defaultValue>
+      <allowedValues>.*</allowedValues>
+      <type>string</type>
+    </parameter>
+  </ParameterList>
+  <supportedTestObjectTypes>
+    <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
+  </supportedTestObjectTypes>
+  <testModules>
+    <TestModule id="EID79b4ffcd-1c88-433f-979d-18baccecc068">
+      <label>Default test module</label>
+      <description><![CDATA[This is the default test module]]></description>
+      <parent ref="EID0a071d31-b17a-4200-817d-ca029564b3ba"/>
+      <testCases>
+        <TestCase id="EIDab45bb2a-5d56-4154-9710-59be21550d64">
+          <label>TestCase label</label>
+          <description><![CDATA[Constraints TestCase for Feature Type with name 'CI_ResponsibleParty' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
+          <parent ref="EID79b4ffcd-1c88-433f-979d-18baccecc068"/>
+          <testSteps>
+            <TestStep id="EID003b4c55-43a8-49d5-8aed-5902acc49378">
+              <label>FIXME-Label</label>
+              <description><![CDATA[FIXME-Description]]></description>
+              <parent ref="EIDab45bb2a-5d56-4154-9710-59be21550d64"/>
+              <statementForExecution>not applicable</statementForExecution>
+              <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
+              <testAssertions>
+                <TestAssertion id="EID58877fb1-4b9c-4a4a-bfea-e84683909306">
+                  <label>TestAssertion</label>
+                  <description><![CDATA[The property with localName 'id' should have a minimum cardinality of 1 and a maximum cardinality of 1]]></description>
+                  <parent ref="EID003b4c55-43a8-49d5-8aed-5902acc49378"/>
+                  <expectedResult>NOT_APPLICABLE</expectedResult>
+                  <expression>let $messages :=
+  (for $record in $db
+     let $typesFound := $record//*[local-name()='CI_ResponsibleParty' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+     for $typeFound in $typesFound 
+       let $propertyCount := count($typeFound/*[local-name()='id']) 
+       return
+       if (($propertyCount lt 1) or ($propertyCount gt 1)) then
+        local:addMessage('TR.invalidPropertyCardinalityError', map { 'localName': 'CI_ResponsibleParty', 'namespace': 'http://www.isotc211.org/2005/gmd', 'invalidCardinality': $propertyCount })
+       else ()
+  )[position() le $limitErrors]
+return
+(if ($messages) then 'FAILED' else 'PASSED',
+ local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+ $messages)</expression>
+                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
+                  <translationTemplates>
+                    <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingTypeContentError"/>
+                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                    <translationTemplate ref="TR.invalidPropertyCardinalityError"/>
+                    <translationTemplate ref="TR.invalidPropertyValueError"/>
+                  </translationTemplates>
+                </TestAssertion>
+              </testAssertions>
+            </TestStep>
+          </testSteps>
+        </TestCase>
+      </testCases>
+    </TestModule>
+  </testModules>
+</ExecutableTestSuite>

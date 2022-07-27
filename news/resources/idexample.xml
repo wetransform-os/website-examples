@@ -1,0 +1,30 @@
+<cp:CadastralParcel gml:id="CadastralParcel_DERP1234000002Fy">
+  <gml:identifier
+    codeSpace="http://inspire.ec.europa.eu/ids">https://registry.gdi-de.org/id/de.cp/CadastralParcel_DERP1234000002Fy</gml:identifier>
+  <cp:areaValue uom="m2">6229.0</cp:areaValue>
+  <cp:beginLifespanVersion>
+    2010-05-20T13:58:47Z
+  </cp:beginLifespanVersion>
+  <cp:endLifespanVersion nilReason="other:unpopulated" xsi:nil="true">
+  </cp:endLifespanVersion>
+  <cp:geometry>
+    ...
+  </cp:geometry>
+  <cp:inspireId>
+    <base:Identifier>
+      <base:localId>CadastralParcel_DERP1234000002Fy</base:localId>
+      <base:namespace>https://registry.gdi-de.org/id/de.by.cp
+      </base:namespace>
+      <base:versionId nilReason="other:unpopulated" xsi:nil="true">
+      </base:versionId>
+    </base:Identifier>
+  </cp:inspireId>
+  <cp:label>7</cp:label>
+  <cp:nationalCadastralReference>...</cp:nationalCadastralReference>
+  <cp:referencePoint>
+    ...
+  </cp:referencePoint>
+  <cp:validFrom>2007-12-31T23:00:00Z</cp:validFrom>
+  <cp:validTo nilReason="other:unpopulated" xsi:nil="true"></cp:validTo>
+  <cp:zoning xlink:href="#CadastralZoning_072566000"></cp:zoning>
+</cp:CadastralParcel>
